@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#ux -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>État des Lieux Digital — Belga Solar · Poush</title>
+<link href="./État des Lieux Digital — Belga Solar · Poush_files/css2" rel="stylesheet">
+<style>
+:root {
+  --black: #030505;
+  --blue: #1c2b96;
+  --yellow: #fabd05;
+  --red: #fa3b2e;
+  --green: #2eb078;
+  --pink: #fa8fa3;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f1f3f5;
+  --gray-200: #e9ecef;
+  --gray-400: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-800: #343a40;
+  --orange: #f59e0b;
+  --font: 'DM Sans', sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: #111; color: var(--black); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--black); border-bottom: 1px solid #222;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; height: 56px;
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-dots { display: flex; gap: 5px; }
+.nav-dot { width: 9px; height: 9px; border-radius: 50%; }
+.nav-logo { color: #fff; font-size: 17px; font-weight: 700; letter-spacing: -.3px; }
+.nav-divider { width: 1px; height: 20px; background: #333; }
+.nav-title { color: var(--yellow); font-size: 13px; font-weight: 500; }
+.nav-pills { display: flex; gap: 4px; overflow-x: auto; }
+.nav-pill {
+  padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;
+  color: #888; cursor: pointer; white-space: nowrap; transition: all .15s;
+  border: 1px solid transparent; text-decoration: none;
+}
+.nav-pill:hover, .nav-pill.active { color: #fff; background: #222; border-color: #333; }
+
+/* SLIDES */
+main { padding-top: 56px; }
+.slide {
+  min-height: 100vh; display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+}
+.slide-inner {
+  max-width: 1100px; margin: 0 auto; padding: 64px 40px;
+  width: 100%; flex: 1;
+}
+.slide-num {
+  font-size: 11px; font-weight: 600; color: var(--gray-400);
+  letter-spacing: 1px; margin-bottom: 8px; font-family: var(--mono);
+}
+.slide-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 20px; font-size: 11px;
+  font-weight: 700; letter-spacing: .8px; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.slide-h1 { font-size: 36px; font-weight: 700; line-height: 1.1; margin-bottom: 8px; }
+.slide-sub { font-size: 15px; color: var(--gray-600); margin-bottom: 32px; }
+
+/* COVER */
+.slide-cover { background: var(--black); color: #fff; }
+.cover-bar { width: 6px; position: absolute; left: 0; top: 0; bottom: 0; display: flex; flex-direction: column; }
+.cover-bar-seg { flex: 1; }
+.cover-inner { padding: 80px 60px; }
+.cover-eyebrow { font-size: 12px; font-weight: 700; color: var(--yellow); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
+.cover-name { font-size: 72px; font-weight: 700; line-height: .95; color: #fff; margin-bottom: 8px; }
+.cover-url { font-size: 18px; color: #666; font-family: var(--mono); margin-bottom: 40px; }
+.cover-line { width: 80px; height: 3px; background: var(--yellow); margin-bottom: 28px; }
+.cover-desc { font-size: 16px; color: #aaa; margin-bottom: 6px; }
+.cover-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 60px; }
+.cover-pill {
+  padding: 6px 16px; border: 1px solid #333; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: #ccc;
+}
+.cover-meta { font-size: 12px; color: #555; }
+.cover-bcorp {
+  position: absolute; right: 60px; bottom: 80px;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.bcorp-badge {
+  width: 70px; height: 70px; border-radius: 50%;
+  background: linear-gradient(135deg, #2eb078, #1a6b47);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 11px; font-weight: 700; text-align: center; line-height: 1.2;
+}
+.bcorp-label { font-size: 10px; color: #555; text-align: center; }
+
+/* CARDS */
+.card {
+  background: #fff; border-radius: 16px; padding: 24px;
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 2px 12px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.04);
+}
+.card-title {
+  font-size: 13px; font-weight: 700; color: var(--gray-600);
+  text-transform: uppercase; letter-spacing: .8px; margin-bottom: 4px;
+  display: flex; align-items: center; gap: 8px;
+}
+.card-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.big-num { font-size: 44px; font-weight: 700; line-height: 1; }
+.big-label { font-size: 12px; color: var(--gray-600); margin-top: 4px; }
+.status-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700;
+}
+
+/* GAUGE SVG */
+.gauge-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.gauge-label { font-size: 12px; font-weight: 600; color: var(--gray-800); text-align: center; }
+.gauge-sub { font-size: 10px; font-weight: 700; letter-spacing: .5px; text-align: center; }
+
+/* GRIDS */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+
+/* METRIC ROW */
+.metric-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px; border-radius: 10px; margin-bottom: 6px;
+}
+.metric-name { font-size: 13px; font-weight: 500; color: var(--gray-800); }
+.metric-val { font-size: 13px; font-weight: 700; font-family: var(--mono); }
+.metric-dot { width: 8px; height: 8px; border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
+
+/* KEYWORD TABLE */
+.kw-table { width: 100%; border-collapse: collapse; }
+.kw-table th {
+  background: var(--black); color: var(--yellow);
+  font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  padding: 10px 14px; text-align: left; text-transform: uppercase;
+}
+.kw-table th:first-child { border-radius: 8px 0 0 0; }
+.kw-table th:last-child { border-radius: 0 8px 0 0; }
+.kw-table td { padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--gray-100); }
+.kw-table tr:hover td { background: var(--gray-50); }
+.pos-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 8px;
+  font-size: 12px; font-weight: 800; color: #fff;
+}
+
+/* SECTION BREAK */
+.section-break {
+  background: var(--blue); color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 200px; text-align: center; padding: 60px;
+}
+.section-break h2 { font-size: 48px; font-weight: 700; }
+.section-break p { font-size: 16px; opacity: .7; margin-top: 8px; }
+
+/* CWV BARS */
+.cwv-bar-wrap { margin-bottom: 12px; }
+.cwv-bar-label { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.cwv-bar-name { font-size: 12px; font-weight: 600; color: var(--gray-800); }
+.cwv-bar-val { font-size: 12px; font-weight: 700; font-family: var(--mono); }
+.cwv-bar-track { height: 8px; background: var(--gray-100); border-radius: 4px; overflow: hidden; }
+.cwv-bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+
+/* SOCIAL CARDS */
+.social-card {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 12px; border: 1px solid var(--gray-200);
+  background: #fff;
+}
+.social-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.social-name { font-size: 14px; font-weight: 700; color: var(--black); }
+.social-stats { font-size: 12px; color: var(--gray-600); }
+
+/* OPP CARDS */
+.opp-card {
+  display: flex; gap: 16px; padding: 20px; border-radius: 14px;
+  background: #fff; border: 1px solid var(--gray-200);
+  box-shadow: 0 2px 8px rgba(0,0,0,.05); margin-bottom: 12px;
+}
+.opp-num {
+  width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800; color: #fff;
+}
+.opp-title { font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+.opp-desc { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+
+/* GEO CARDS */
+.geo-card {
+  background: #0d1117; border: 1px solid #222; border-radius: 14px; padding: 20px;
+  position: relative; overflow: hidden;
+}
+.geo-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.geo-platform { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.geo-status { font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+.geo-desc { font-size: 12px; color: #888; line-height: 1.6; }
+
+/* CLOSING */
+.slide-closing { background: var(--black); color: #fff; min-height: 100vh; position: relative; }
+.closing-inner { padding: 80px 60px; }
+.closing-sub { font-size: 28px; color: #666; font-weight: 300; }
+.closing-title { font-size: 64px; font-weight: 700; color: #fff; line-height: .95; margin-bottom: 16px; }
+.closing-desc { font-size: 16px; color: #999; max-width: 600px; line-height: 1.7; margin-bottom: 40px; }
+.closing-services { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 48px; }
+.closing-svc {
+  background: #111; border: 1px solid #222; border-radius: 12px; padding: 18px;
+  font-size: 13px; font-weight: 600; color: #fff;
+}
+.closing-svc-icon { font-size: 22px; margin-bottom: 8px; }
+.closing-baseline { font-size: 20px; font-weight: 700; color: var(--yellow); margin-bottom: 12px; }
+.closing-contact { font-size: 13px; color: #555; }
+
+/* INSIGHT BOX */
+.insight {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--gray-50); border-left: 3px solid var(--yellow);
+  border-radius: 0 10px 10px 0; padding: 14px 18px; margin-top: 20px;
+}
+.insight-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.insight-text { font-size: 13px; color: var(--gray-800); line-height: 1.6; }
+
+/* ALERT BOX */
+.alert-box {
+  display: flex; gap: 12px; align-items: flex-start;
+  border-radius: 10px; padding: 14px 18px; margin-bottom: 20px;
+}
+
+/* SLIDE BG VARIANTS */
+.bg-white { background: #fff; }
+.bg-light { background: var(--gray-50); }
+.bg-dark { background: #0d1117; }
+
+/* SECTION HEADER */
+.section-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 28px; padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.section-header h2 { font-size: 26px; font-weight: 700; color: var(--black); }
+.section-header .url-badge {
+  padding: 4px 14px; background: var(--gray-100); border-radius: 20px;
+  font-size: 12px; font-family: var(--mono); color: var(--gray-600);
+}
+
+/* SCROLL indicator */
+.scroll-hint {
+  position: fixed; bottom: 24px; right: 24px;
+  background: var(--black); color: #fff; border: 1px solid #333;
+  border-radius: 20px; padding: 8px 16px; font-size: 11px;
+  display: flex; align-items: center; gap: 6px;
+  opacity: 0; transition: opacity .3s; pointer-events: none;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in { animation: fadeIn .5s ease both; }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-dots">
+      <div class="nav-dot" style="background:#fa3b2e"></div>
+      <div class="nav-dot" style="background:#fabd05"></div>
+      <div class="nav-dot" style="background:#fa8fa3"></div>
+      <div class="nav-dot" style="background:#2eb078"></div>
+      <div class="nav-dot" style="background:#1c2b96"></div>
+    </div>
+    <span class="nav-logo">poush</span>
+    <div class="nav-divider"></div>
+    <span class="nav-title">État des Lieux Digital — Belga Solar</span>
+  </div>
+  <div class="nav-pills">
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#cover">Cover</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#perf">Performances</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#crawl">Crawl</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#seo-tech">SEO Tech</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#trafic">Trafic</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#keywords">Mots-clés</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#ux">UX</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#geo">GEO / IA</a>
+    <a class="nav-pill active" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#gmb">GMB &amp; Social</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#opps">Opportunités</a>
+    <a class="nav-pill" href="file:///Users/michaeldebecker/Downloads/BelgaSolar_Poush_Presentation.html#closing">Poush</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════ COVER -->
+<section id="cover" class="slide slide-cover">
+  <div class="cover-bar">
+    <div class="cover-bar-seg" style="background:#fa3b2e"></div>
+    <div class="cover-bar-seg" style="background:#fabd05"></div>
+    <div class="cover-bar-seg" style="background:#fa8fa3"></div>
+    <div class="cover-bar-seg" style="background:#2eb078"></div>
+    <div class="cover-bar-seg" style="background:#1c2b96"></div>
+  </div>
+  <div class="cover-inner" style="padding-left:60px">
+    <div class="cover-eyebrow">État des lieux digital · Mai 2026</div>
+    <div class="cover-name">Belga<br>Solar</div>
+    <div class="cover-url">www.belgasolar.com</div>
+    <div class="cover-line"></div>
+    <div class="cover-desc">Une analyse complète de votre écosystème digital :</div>
+    <div class="cover-pills">
+      <span class="cover-pill">🌐 Site Web</span>
+      <span class="cover-pill">🔍 SEO</span>
+      <span class="cover-pill">🤖 GEO / IA</span>
+      <span class="cover-pill">📍 Google My Business</span>
+      <span class="cover-pill">📱 Réseaux Sociaux</span>
+    </div>
+    <div class="cover-meta">Préparé par Poush · michael@poush.be</div>
+  </div>
+  <div class="cover-bcorp">
+    <div class="bcorp-badge">B<br>Corp<br>✓</div>
+    <div class="bcorp-label" style="color:#555">Score 95,7<br>Certifié sept. 2024</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ PERF -->
+<section id="perf" class="slide bg-white">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#fff0ee;color:#fa3b2e">⚡ Performances &amp; Core Web Vitals</div>
+      <h2 class="slide-h1">Rapport PageSpeed Insights</h2>
+      <p class="slide-sub">Rapport du 20 mai 2026 · belgasolar.com</p>
+    </div>
+    <span class="url-badge">pagespeed.web.dev</span>
+  </div>
+
+  <!-- CWV Alert -->
+  <div class="alert-box" style="background:#fff0ee;border:1px solid #fca59e;margin-bottom:24px">
+    <span style="font-size:18px">⚠️</span>
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#c0392b">Évaluation Core Web Vitals : ÉCHEC (Mobile &amp; Desktop)</div>
+      <div style="font-size:13px;color:#888;margin-top:2px">Le CLS mobile est critique (0,63) — la vidéo hero et les chargements asynchrones génèrent des décalages de mise en page importants.</div>
+    </div>
+  </div>
+
+  <!-- Lighthouse gauges -->
+  <div class="grid-2" style="margin-bottom:24px;gap:20px">
+    <!-- Desktop -->
+    <div class="card">
+      <div class="card-title" style="margin-bottom:20px">
+        <div class="card-icon" style="background:#e8ecff">🖥️</div>
+        Desktop
+        <span style="font-size:10px;color:#aaa;font-weight:400;margin-left:4px">ANALYSE SUR ORDINATEUR</span>
+      </div>
+      <div class="grid-4">
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#fa3b2e" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="94" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#fa3b2e" font-family="DM Sans">53</text>
+          </svg>
+          <div class="gauge-label">Performances</div>
+          <div class="gauge-sub" style="color:#fa3b2e">FAIBLE</div>
+        </div>
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f59e0b" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="32" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#f59e0b" font-family="DM Sans">84</text>
+          </svg>
+          <div class="gauge-label">Accessibilité</div>
+          <div class="gauge-sub" style="color:#f59e0b">MOYEN</div>
+        </div>
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#2eb078" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="8" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#2eb078" font-family="DM Sans">96</text>
+          </svg>
+          <div class="gauge-label">Bonnes pratiques</div>
+          <div class="gauge-sub" style="color:#2eb078">EXCELLENT</div>
+        </div>
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#2eb078" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="16" font-weight="700" fill="#2eb078" font-family="DM Sans">100</text>
+          </svg>
+          <div class="gauge-label">SEO</div>
+          <div class="gauge-sub" style="color:#2eb078">PARFAIT</div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile -->
+    <div class="card">
+      <div class="card-title" style="margin-bottom:20px">
+        <div class="card-icon" style="background:#e8f8f0">📱</div>
+        Mobile
+        <span style="font-size:10px;color:#aaa;font-weight:400;margin-left:4px">ANALYSE SUR MOBILE</span>
+      </div>
+      <div class="grid-4">
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#fa3b2e" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="83" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#fa3b2e" font-family="DM Sans">59</text>
+          </svg>
+          <div class="gauge-label">Performances</div>
+          <div class="gauge-sub" style="color:#fa3b2e">FAIBLE</div>
+        </div>
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f59e0b" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="34" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#f59e0b" font-family="DM Sans">83</text>
+          </svg>
+          <div class="gauge-label">Accessibilité</div>
+          <div class="gauge-sub" style="color:#f59e0b">MOYEN</div>
+        </div>
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#2eb078" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="8" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#2eb078" font-family="DM Sans">96</text>
+          </svg>
+          <div class="gauge-label">Bonnes pratiques</div>
+          <div class="gauge-sub" style="color:#2eb078">EXCELLENT</div>
+        </div>
+        <div class="gauge-wrap">
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#f1f3f5" stroke-width="6"></circle>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#2eb078" stroke-width="6" stroke-dasharray="201" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 40 40)"></circle>
+            <text x="40" y="45" text-anchor="middle" font-size="16" font-weight="700" fill="#2eb078" font-family="DM Sans">100</text>
+          </svg>
+          <div class="gauge-label">SEO</div>
+          <div class="gauge-sub" style="color:#2eb078">PARFAIT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CWV Detail -->
+  <div class="grid-2" style="gap:20px">
+    <div class="card">
+      <div class="card-title" style="margin-bottom:16px">📱 Core Web Vitals — Mobile</div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">LCP — Largest Contentful Paint</span><span class="cwv-bar-val" style="color:#f59e0b">3,6 s ⚠</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:60%;background:#f59e0b"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">INP — Interaction to Next Paint</span><span class="cwv-bar-val" style="color:#2eb078">186 ms ✓</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:78%;background:#2eb078"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">CLS — Cumulative Layout Shift</span><span class="cwv-bar-val" style="color:#fa3b2e">0,63 ✗ CRITIQUE</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:85%;background:#fa3b2e"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">FCP — First Contentful Paint</span><span class="cwv-bar-val" style="color:#f59e0b">2,3 s ⚠</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:55%;background:#f59e0b"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">TTFB — Time to First Byte</span><span class="cwv-bar-val" style="color:#f59e0b">2,0 s ⚠</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:50%;background:#f59e0b"></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:16px">🖥️ Core Web Vitals — Desktop</div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">LCP — Largest Contentful Paint</span><span class="cwv-bar-val" style="color:#f59e0b">2,7 s ⚠</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:48%;background:#f59e0b"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">INP — Interaction to Next Paint</span><span class="cwv-bar-val" style="color:#2eb078">38 ms ✓</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:95%;background:#2eb078"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">CLS — Cumulative Layout Shift</span><span class="cwv-bar-val" style="color:#2eb078">0,01 ✓ BON</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:99%;background:#2eb078"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">FCP — First Contentful Paint</span><span class="cwv-bar-val" style="color:#2eb078">1,7 s ✓</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:82%;background:#2eb078"></div></div>
+      </div>
+      <div class="cwv-bar-wrap">
+        <div class="cwv-bar-label"><span class="cwv-bar-name">TTFB — Time to First Byte</span><span class="cwv-bar-val" style="color:#f59e0b">1,4 s ⚠</span></div>
+        <div class="cwv-bar-track"><div class="cwv-bar-fill" style="width:60%;background:#f59e0b"></div></div>
+      </div>
+      <div class="insight" style="margin-top:16px">
+        <span class="insight-icon">💡</span>
+        <span class="insight-text">Le desktop est bien meilleur — mais la vidéo hero en autoplay reste le principal suspect pour le LCP lent des deux versions.</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CRAWL -->
+<section id="crawl" class="slide bg-light">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#e8ecff;color:#1c2b96">🐸 Audit Technique — Screaming Frog</div>
+      <h2 class="slide-h1">Résultats du crawl complet</h2>
+      <p class="slide-sub">500 URLs analysées · 20 mai 2026</p>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="grid-5" style="margin-bottom:24px">
+    <div class="card" style="text-align:center;padding:20px 12px">
+      <div style="font-size:36px;font-weight:800;color:#1c2b96">500</div>
+      <div style="font-size:11px;font-weight:600;color:#888;margin-top:4px">URLs crawlées</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px 12px">
+      <div style="font-size:36px;font-weight:800;color:#2eb078">115</div>
+      <div style="font-size:11px;font-weight:600;color:#888;margin-top:4px">Pages HTML</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px 12px">
+      <div style="font-size:36px;font-weight:800;color:#fa3b2e">1</div>
+      <div style="font-size:11px;font-weight:600;color:#888;margin-top:4px">Erreur 4xx interne</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px 12px">
+      <div style="font-size:36px;font-weight:800;color:#f59e0b">4</div>
+      <div style="font-size:11px;font-weight:600;color:#888;margin-top:4px">Redirections internes</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px 12px">
+      <div style="font-size:36px;font-weight:800;color:#2eb078">100%</div>
+      <div style="font-size:11px;font-weight:600;color:#888;margin-top:4px">HTTPS</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="gap:20px">
+    <div class="card">
+      <div class="card-title" style="margin-bottom:16px">🏷️ Balises &amp; On-page</div>
+      <div class="metric-row" style="background:#f0fff8">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#2eb078"></div><span class="metric-name">Title manquant</span></div>
+        <span class="metric-val" style="color:#2eb078">0 / 110</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Title en doublon</span></div>
+        <span class="metric-val" style="color:#f59e0b">17 / 110</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Title &gt; 60 caractères</span></div>
+        <span class="metric-val" style="color:#f59e0b">37 / 110</span>
+      </div>
+      <div class="metric-row" style="background:#fff0ee">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#fa3b2e"></div><span class="metric-name">Meta description manquante</span></div>
+        <span class="metric-val" style="color:#fa3b2e">21 / 110</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Meta description en doublon</span></div>
+        <span class="metric-val" style="color:#f59e0b">12 / 110</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">H1 manquant</span></div>
+        <span class="metric-val" style="color:#f59e0b">6 / 110</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">H1 multiple sur une page</span></div>
+        <span class="metric-val" style="color:#f59e0b">8 / 110</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Canonical manquant</span></div>
+        <span class="metric-val" style="color:#f59e0b">19 / 129</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:16px">🖼️ Images, Contenu &amp; Structure</div>
+      <div class="metric-row" style="background:#fff0ee">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#fa3b2e"></div><span class="metric-name">Images sans texte alt</span></div>
+        <span class="metric-val" style="color:#fa3b2e">94 / 209</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Images sans attributs taille</span></div>
+        <span class="metric-val" style="color:#f59e0b">66 / 209</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Images &gt; 100 Ko</span></div>
+        <span class="metric-val" style="color:#f59e0b">81 / 209</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Pages à faible contenu</span></div>
+        <span class="metric-val" style="color:#f59e0b">20 / 129</span>
+      </div>
+      <div class="metric-row" style="background:#fffbf0">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Lisibilité difficile</span></div>
+        <span class="metric-val" style="color:#f59e0b">23 / 129</span>
+      </div>
+      <div class="metric-row" style="background:#f0fff8">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#2eb078"></div><span class="metric-name">Profondeur max. 3 clics</span></div>
+        <span class="metric-val" style="color:#2eb078">71,8% profondeur 3</span>
+      </div>
+      <div class="metric-row" style="background:#f0fff8">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#2eb078"></div><span class="metric-name">Hreflang FR / NL / EN</span></div>
+        <span class="metric-val" style="color:#2eb078">100% couvert</span>
+      </div>
+      <div class="metric-row" style="background:#fff0ee">
+        <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#fa3b2e"></div><span class="metric-name">En-têtes sécurité manquants</span></div>
+        <span class="metric-val" style="color:#fa3b2e">97% des pages</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ SEO TECH -->
+<section id="seo-tech" class="slide bg-white">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#e8ecff;color:#1c2b96">🔧 SEO Technique</div>
+      <h2 class="slide-h1">Configuration &amp; Autorité</h2>
+      <p class="slide-sub">Données SEObserver · TrustFlow, backlinks, indexation</p>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px">
+    <div>
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-title" style="margin-bottom:16px">⚙️ Configuration technique</div>
+        <div class="metric-row" style="background:#f0fff8">
+          <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#2eb078"></div><span class="metric-name">Sitemap XML (Yoast · 5 sitemaps)</span></div>
+          <span class="status-badge" style="background:#e6f9f0;color:#2eb078">✓ Présent</span>
+        </div>
+        <div class="metric-row" style="background:#f0fff8">
+          <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#2eb078"></div><span class="metric-name">Robots.txt</span></div>
+          <span class="status-badge" style="background:#e6f9f0;color:#2eb078">✓ Bien configuré</span>
+        </div>
+        <div class="metric-row" style="background:#f0fff8">
+          <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#2eb078"></div><span class="metric-name">HTTPS · Contenu mixte</span></div>
+          <span class="status-badge" style="background:#e6f9f0;color:#2eb078">✓ 100% sécurisé</span>
+        </div>
+        <div class="metric-row" style="background:#fffbf0">
+          <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Balises META (21 manquantes)</span></div>
+          <span class="status-badge" style="background:#fff8e0;color:#d97706">⚠ À optimiser</span>
+        </div>
+        <div class="metric-row" style="background:#fffbf0">
+          <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#f59e0b"></div><span class="metric-name">Schema.org / données structurées</span></div>
+          <span class="status-badge" style="background:#fff8e0;color:#d97706">⚠ Partiel</span>
+        </div>
+        <div class="metric-row" style="background:#fff0ee">
+          <div style="display:flex;align-items:center"><div class="metric-dot" style="background:#fa3b2e"></div><span class="metric-name">Core Web Vitals mobile</span></div>
+          <span class="status-badge" style="background:#ffecec;color:#fa3b2e">✗ Échec</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="grid-2" style="gap:12px;margin-bottom:16px">
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:48px;font-weight:800;color:#2eb078">17</div>
+          <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:.5px">TRUST FLOW</div>
+          <div style="font-size:11px;color:#aaa;margin-top:4px">Science &amp; Technology</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:48px;font-weight:800;color:#1c2b96">26</div>
+          <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:.5px">CITATION FLOW</div>
+          <div style="font-size:11px;color:#aaa;margin-top:4px">Ratio TF/CF : 0,65</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:48px;font-weight:800;color:#030505">86</div>
+          <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:.5px">DOMAINES RÉFÉRENTS</div>
+          <div style="font-size:11px;color:#aaa;margin-top:4px">456 pages référentes</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:48px;font-weight:800;color:#030505">116</div>
+          <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:.5px">PAGES INDEXÉES</div>
+          <div style="font-size:11px;color:#aaa;margin-top:4px">Majestic</div>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-icon">💡</span>
+        <span class="insight-text">Le Trust Flow est en progression constante depuis mai 2024 (2 → 17). Le profil de backlinks est sain — iea-pvps.org (TF 40) figure parmi les références de qualité. Priorité : acquérir des liens médias belges (presse énergie, B Corp).</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ TRAFIC -->
+<section id="trafic" class="slide bg-light">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#e8f8f0;color:#2eb078">📈 Trafic Organique</div>
+      <h2 class="slide-h1">Évolution &amp; Tendances</h2>
+      <p class="slide-sub">Source : SEMrush via SEObserver · Belgique 🇧🇪</p>
+    </div>
+  </div>
+  <div class="grid-3" style="margin-bottom:24px;gap:16px">
+    <div class="card" style="border-top:3px solid #2eb078">
+      <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:.5px;margin-bottom:8px">TRAFIC MENSUEL ESTIMÉ</div>
+      <div style="font-size:42px;font-weight:800;color:#2eb078;line-height:1">~450</div>
+      <div style="font-size:12px;color:#aaa;margin-top:4px">visites / mois (SEMrush)</div>
+      <div class="status-badge" style="background:#e6f9f0;color:#2eb078;margin-top:10px">↑ En forte hausse</div>
+    </div>
+    <div class="card" style="border-top:3px solid #1c2b96">
+      <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:.5px;margin-bottom:8px">MOTS-CLÉS POSITIONNÉS</div>
+      <div style="font-size:42px;font-weight:800;color:#1c2b96;line-height:1">10+</div>
+      <div style="font-size:12px;color:#aaa;margin-top:4px">positions top 5 Belgique</div>
+      <div class="status-badge" style="background:#e8ecff;color:#1c2b96;margin-top:10px">Niche plug &amp; play forte</div>
+    </div>
+    <div class="card" style="border-top:3px solid #fabd05">
+      <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:.5px;margin-bottom:8px">TENDANCE 2026</div>
+      <div style="font-size:42px;font-weight:800;color:#030505;line-height:1">↗</div>
+      <div style="font-size:12px;color:#aaa;margin-top:4px">Pic atteint avr. 2026</div>
+      <div class="status-badge" style="background:#fff8e0;color:#d97706;margin-top:10px">Après creux jan. 2026</div>
+    </div>
+  </div>
+
+  <!-- Chart visuel -->
+  <div class="card" style="padding:28px">
+    <div style="font-size:13px;font-weight:700;color:#030505;margin-bottom:20px">Historique du trafic SEMrush · Avr. 2024 → Mai 2026</div>
+    <div style="position:relative;height:160px;display:flex;align-items:flex-end;gap:3px;padding-bottom:24px">
+      <!-- bars representing traffic data -->
+      <div style="position:absolute;bottom:24px;left:0;right:0;border-top:1px dashed #e8e8e8"></div>
+      <div style="position:absolute;bottom:24px;left:0;right:0;top:0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none">
+        <div style="font-size:10px;color:#ccc;font-family:var(--mono)">500</div>
+        <div style="font-size:10px;color:#ccc;font-family:var(--mono)">250</div>
+        <div style="font-size:10px;color:#ccc;font-family:var(--mono)">0</div>
+      </div>
+      <div style="flex:1;display:flex;align-items:flex-end;gap:2px;padding-left:28px">
+        <!-- data points as bars with gradient -->
+        <div style="flex:1;height:25%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.7" title="Avr 24"></div>
+        <div style="flex:1;height:28%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.75"></div>
+        <div style="flex:1;height:22%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.7"></div>
+        <div style="flex:1;height:20%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.7"></div>
+        <div style="flex:1;height:30%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.75"></div>
+        <div style="flex:1;height:38%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.8"></div>
+        <div style="flex:1;height:48%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.85"></div>
+        <div style="flex:1;height:62%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:78%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:88%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:92%;background:linear-gradient(to top,#2eb078,#52c99a);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:85%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:72%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.9"></div>
+        <div style="flex:1;height:75%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0;opacity:.9"></div>
+        <div style="flex:1;height:82%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:90%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:95%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:100%;background:linear-gradient(to top,#fa3b2e,#fc7a72);border-radius:3px 3px 0 0" title="Pic avr. 2026"></div>
+        <div style="flex:1;height:92%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:88%;background:linear-gradient(to top,#1c2b96,#4a63c9);border-radius:3px 3px 0 0"></div>
+        <div style="flex:1;height:94%;background:linear-gradient(to top,#fabd05,#fcd34d);border-radius:3px 3px 0 0" title="Mai 2026"></div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding-left:28px;padding-top:6px">
+      <span style="font-size:10px;color:#aaa">Avr. 2024</span>
+      <span style="font-size:10px;color:#aaa">Oct. 2024</span>
+      <span style="font-size:10px;color:#aaa">Avr. 2025</span>
+      <span style="font-size:10px;color:#aaa">Oct. 2025</span>
+      <span style="font-size:10px;color:#aaa">Mai 2026</span>
+    </div>
+    <div style="display:flex;gap:16px;margin-top:12px">
+      <div style="display:flex;align-items:center;gap:6px"><div style="width:12px;height:12px;background:#2eb078;border-radius:2px"></div><span style="font-size:11px;color:#888">Pic historique</span></div>
+      <div style="display:flex;align-items:center;gap:6px"><div style="width:12px;height:12px;background:#fa3b2e;border-radius:2px"></div><span style="font-size:11px;color:#888">Maximum absolu (avr. 2026)</span></div>
+      <div style="display:flex;align-items:center;gap:6px"><div style="width:12px;height:12px;background:#fabd05;border-radius:2px"></div><span style="font-size:11px;color:#888">Position actuelle</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ KEYWORDS -->
+<section id="keywords" class="slide bg-white">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#e8ecff;color:#1c2b96">🎯 Mots-clés &amp; Positionnement</div>
+      <h2 class="slide-h1">Top positions SEObserver</h2>
+      <p class="slide-sub">Belgique 🇧🇪 · Source : SEObserver keywords</p>
+    </div>
+  </div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="kw-table">
+      <thead>
+        <tr>
+          <th>Mot-clé</th>
+          <th>Position</th>
+          <th>Volume / mois</th>
+          <th>CPC</th>
+          <th>Compétition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>belga solar</td><td><span class="pos-badge" style="background:#2eb078">1</span></td><td>320</td><td>1,52 €</td><td><span style="color:#888;font-size:12px">Faible</span></td></tr>
+        <tr><td>panneau solaire plug and play belgique</td><td><span class="pos-badge" style="background:#2eb078">2</span></td><td>590</td><td>0,49 €</td><td><span style="color:#fa3b2e;font-size:12px">Haute</span></td></tr>
+        <tr><td>kit solaire plug and play belgique</td><td><span class="pos-badge" style="background:#2eb078">1</span></td><td>110</td><td>0,64 €</td><td><span style="color:#fa3b2e;font-size:12px">Haute</span></td></tr>
+        <tr><td>panneaux solaires plug and play</td><td><span class="pos-badge" style="background:#f59e0b">5</span></td><td>1 000</td><td>0,74 €</td><td><span style="color:#fa3b2e;font-size:12px">Haute</span></td></tr>
+        <tr><td>panneaux solaires plug and play belgique</td><td><span class="pos-badge" style="background:#f59e0b">4</span></td><td>390</td><td>0,49 €</td><td><span style="color:#fa3b2e;font-size:12px">Haute</span></td></tr>
+        <tr><td>panneau solaire plug and play</td><td><span class="pos-badge" style="background:#f59e0b">5</span></td><td>1 300</td><td>0,74 €</td><td><span style="color:#fa3b2e;font-size:12px">Haute</span></td></tr>
+        <tr><td>solar for solar</td><td><span class="pos-badge" style="background:#f59e0b">5</span></td><td>1 300</td><td>1,69 €</td><td><span style="color:#888;font-size:12px">Faible</span></td></tr>
+        <tr><td>panneau plug and play belgique</td><td><span class="pos-badge" style="background:#f59e0b">4</span></td><td>210</td><td>0,47 €</td><td><span style="color:#fa3b2e;font-size:12px">Haute</span></td></tr>
+        <tr><td>kits solaire plug and play</td><td><span class="pos-badge" style="background:#2eb078">2</span></td><td>140</td><td>0,67 €</td><td><span style="color:#fa3b2e;font-size:12px">Haute</span></td></tr>
+        <tr><td>belage</td><td><span class="pos-badge" style="background:#1c2b96">3</span></td><td>170</td><td>0,00 €</td><td><span style="color:#888;font-size:12px">Faible</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert-box" style="background:#fff8e0;border:1px solid #fcd34d;margin-top:20px">
+    <span style="font-size:18px">⚠️</span>
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#92400e">Fort sur la niche plug &amp; play — quasi absent sur les requêtes génériques à fort volume</div>
+      <div style="font-size:13px;color:#888;margin-top:4px">"panneaux solaires belgique" (1 300/mois), "installateur solaire belgique" (880/mois), "installation photovoltaïque belgique" (720/mois) — autant d'opportunités inexploitées.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ UX -->
+<section id="ux" class="slide bg-light">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#fde8f0;color:#fa8fa3">🎨 Analyse UX Heuristique</div>
+      <h2 class="slide-h1">Audit du site web</h2>
+      <p class="slide-sub">Analyse heuristique réalisée en direct · belgasolar.com</p>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;gap:12px;padding:18px;background:#fff;border-radius:14px;border:1px solid #e8f5ef;border-left:4px solid #2eb078">
+      <div style="width:32px;height:32px;background:#e8f5ef;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">✓</div>
+      <div><div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:4px">Navigation &amp; Architecture</div><div style="font-size:13px;color:#6c757d;line-height:1.6">Double navigation (B2C / B2B / International) claire, CTA "Demandez votre devis" bien visible. Bonne hiérarchie des pages et maillage interne cohérent.</div></div>
+    </div>
+    <div style="display:flex;gap:12px;padding:18px;background:#fff;border-radius:14px;border:1px solid #e8f5ef;border-left:4px solid #2eb078">
+      <div style="width:32px;height:32px;background:#e8f5ef;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">✓</div>
+      <div><div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:4px">Message de marque fort</div><div style="font-size:13px;color:#6c757d;line-height:1.6">"Proudly Made in Belgium" — différenciation immédiatement perceptible. Certification B Corp (95,7) mise en avant. Storytelling usine et fabrication convaincant.</div></div>
+    </div>
+    <div style="display:flex;gap:12px;padding:18px;background:#fff;border-radius:14px;border:1px solid #fff3cd;border-left:4px solid #f59e0b">
+      <div style="width:32px;height:32px;background:#fff3cd;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">⚠</div>
+      <div><div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:4px">Vitesse mobile perçue</div><div style="font-size:13px;color:#6c757d;line-height:1.6">La vidéo hero en autoplay ralentit fortement le rendu. Le CLS critique (0,63) génère des sauts de mise en page visibles sur mobile — expérience dégradée à l'atterrissage.</div></div>
+    </div>
+    <div style="display:flex;gap:12px;padding:18px;background:#fff;border-radius:14px;border:1px solid #fff3cd;border-left:4px solid #f59e0b">
+      <div style="width:32px;height:32px;background:#fff3cd;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">⚠</div>
+      <div><div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:4px">SEO éditorial insuffisant</div><div style="font-size:13px;color:#6c757d;line-height:1.6">Contenu riche sur les produits mais peu de pages optimisées pour les requêtes commerciales génériques (installation, prix, aides). Blog peu actif — 20 pages à faible contenu détectées.</div></div>
+    </div>
+    <div style="display:flex;gap:12px;padding:18px;background:#fff;border-radius:14px;border:1px solid #fff3cd;border-left:4px solid #f59e0b">
+      <div style="width:32px;height:32px;background:#fff3cd;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">⚠</div>
+      <div><div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:4px">Conversion à optimiser</div><div style="font-size:13px;color:#6c757d;line-height:1.6">Formulaire devis présent mais sans outil de qualification (consommation, type de toiture, surface…). Opportunité d'augmenter le taux de conversion via un configurateur simple.</div></div>
+    </div>
+    <div style="display:flex;gap:12px;padding:18px;background:#fff;border-radius:14px;border:1px solid #ffe0de;border-left:4px solid #fa3b2e">
+      <div style="width:32px;height:32px;background:#ffe0de;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">✗</div>
+      <div><div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:4px">Balises META sous-pages manquantes</div><div style="font-size:13px;color:#6c757d;line-height:1.6">21 pages sans meta description — principalement les pages produits WooCommerce. Chaque page sans meta perd une opportunité d'accroche dans les SERP et réduit le CTR.</div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ GEO -->
+<section id="geo" class="slide bg-dark">
+<div class="slide-inner">
+  <div class="section-header" style="border-color:#222">
+    <div>
+      <div class="slide-tag" style="background:#fabd0522;color:#fabd05;border:1px solid #fabd0540">🤖 Visibilité GEO / IA</div>
+      <h2 class="slide-h1" style="color:#fff">Présence dans les IA génératives</h2>
+      <p class="slide-sub" style="color:#666">Requêtes testées : "fabricant panneaux solaires belgique", "panneau solaire made in belgium", "belga solar"</p>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:16px;margin-bottom:20px">
+    <div class="geo-card" style="border-color:#f59e0b40">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#f59e0b"></div>
+      <div class="geo-platform">ChatGPT</div>
+      <div class="geo-status" style="color:#f59e0b">⚠ Faible</div>
+      <div class="geo-desc">Cité uniquement sur requête de marque exacte "belga solar". Absent sur toutes les requêtes génériques liées au solaire en Belgique.</div>
+    </div>
+    <div class="geo-card" style="border-color:#f59e0b40">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#f59e0b"></div>
+      <div class="geo-platform">Gemini (Google)</div>
+      <div class="geo-status" style="color:#f59e0b">⚠ Faible</div>
+      <div class="geo-desc">Apparaît dans les snippets Google SGE mais sans fiche enrichie. Base exploitable — Schema.org et FAQ permettraient d'améliorer rapidement la visibilité.</div>
+    </div>
+    <div class="geo-card" style="border-color:#fa3b2e40">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#fa3b2e"></div>
+      <div class="geo-platform">Perplexity</div>
+      <div class="geo-status" style="color:#fa3b2e">✗ Absent</div>
+      <div class="geo-desc">Non référencé dans les réponses sur l'énergie solaire en Belgique. Aucune citation détectée même sur requête de marque.</div>
+    </div>
+    <div class="geo-card" style="border-color:#fa3b2e40">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#fa3b2e"></div>
+      <div class="geo-platform">Copilot (Microsoft Bing)</div>
+      <div class="geo-status" style="color:#fa3b2e">✗ Absent</div>
+      <div class="geo-desc">Invisible sur les requêtes commerciales. Le manque de contenu structuré (FAQ, données chiffrées, Schema.org) nuit directement à l'indexation IA.</div>
+    </div>
+  </div>
+  <div style="background:#0a2a1a;border:1px solid #2eb07840;border-radius:12px;padding:18px;display:flex;gap:12px">
+    <span style="font-size:20px">💡</span>
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#2eb078;margin-bottom:4px">Opportunité GEO exceptionnelle</div>
+      <div style="font-size:13px;color:#888;line-height:1.6">Belga Solar est le <strong style="color:#fff">seul fabricant belge de panneaux photovoltaïques standards</strong> — une position unique, idéale pour dominer les réponses IA. Un contenu structuré (FAQ, données chiffrées, Schema.org) permettrait de s'imposer rapidement dans ChatGPT, Gemini et Perplexity sur toutes les requêtes solaires en Belgique.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ GMB -->
+<section id="gmb" class="slide bg-white">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#e8f8f0;color:#2eb078">📍 GMB &amp; Réseaux Sociaux</div>
+      <h2 class="slide-h1">Présence locale &amp; sociale</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:24px">
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:12px">Google My Business</div>
+      <div class="grid-2" style="gap:12px;margin-bottom:16px">
+        <div class="card" style="text-align:center;border-top:3px solid #2eb078">
+          <div style="font-size:44px;font-weight:800;color:#2eb078">4,9</div>
+          <div style="font-size:16px;color:#fabd05;margin-bottom:4px">★★★★★</div>
+          <div style="font-size:11px;color:#888;font-weight:600">NOTE MOYENNE</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid #1c2b96">
+          <div style="font-size:44px;font-weight:800;color:#1c2b96">46</div>
+          <div style="font-size:12px;color:#888;margin-top:8px">avis Google</div>
+          <div class="status-badge" style="background:#e8ecff;color:#1c2b96;margin-top:8px">Volume crédible</div>
+        </div>
+      </div>
+      <div class="card" style="background:#f0fff8;border-color:#b3e8d0">
+        <div style="font-size:13px;font-weight:700;color:#2eb078;margin-bottom:8px">✓ Fiche GMB complète</div>
+        <div style="font-size:13px;color:#6c757d;line-height:1.6">Adresse, horaires, photos, catégories, lien site web — tout est correctement renseigné. Réputation client excellente. <strong>Point à améliorer :</strong> publier des posts GMB réguliers et activer les Questions/Réponses.</div>
+      </div>
+      <div class="card" style="background:#e8ecff;border-color:#b3c0f0;margin-top:12px">
+        <div style="font-size:13px;font-weight:700;color:#1c2b96;margin-bottom:6px">🏆 B Corp Certifié — Score 95,7</div>
+        <div style="font-size:13px;color:#6c757d">Certifié depuis septembre 2024. Un différenciateur rare dans le secteur solaire — encore sous-exploité dans la stratégie digitale.</div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#030505;margin-bottom:12px">Réseaux Sociaux</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="social-card">
+          <div class="social-icon" style="background:#e8f0fe;font-size:20px">in</div>
+          <div>
+            <div class="social-name">LinkedIn</div>
+            <div class="social-stats">Page entreprise active · publications B2B régulières</div>
+          </div>
+          <span class="status-badge" style="background:#e6f9f0;color:#2eb078;margin-left:auto">✓ Actif</span>
+        </div>
+        <div class="social-card">
+          <div class="social-icon" style="background:#e8f0fe;font-size:20px">f</div>
+          <div>
+            <div class="social-name">Facebook</div>
+            <div class="social-stats">578 followers · dernier post 29/04/2026</div>
+          </div>
+          <span class="status-badge" style="background:#e6f9f0;color:#2eb078;margin-left:auto">✓ Actif</span>
+        </div>
+        <div class="social-card">
+          <div class="social-icon" style="background:#fce8f3;font-size:20px">📷</div>
+          <div>
+            <div class="social-name">Instagram</div>
+            <div class="social-stats">192 followers · 50 publications · contenu régulier</div>
+          </div>
+          <span class="status-badge" style="background:#e6f9f0;color:#2eb078;margin-left:auto">✓ Actif</span>
+        </div>
+        <div class="social-card">
+          <div class="social-icon" style="background:#fff0ee;font-size:20px">▶</div>
+          <div>
+            <div class="social-name">YouTube</div>
+            <div class="social-stats">Chaîne présente · vidéos usine disponibles</div>
+          </div>
+          <span class="status-badge" style="background:#fff8e0;color:#d97706;margin-left:auto">⚠ Peu optimisé</span>
+        </div>
+        <div class="social-card" style="opacity:.7">
+          <div class="social-icon" style="background:#f1f3f5;font-size:20px">♪</div>
+          <div>
+            <div class="social-name">TikTok</div>
+            <div class="social-stats">Aucune présence détectée</div>
+          </div>
+          <span class="status-badge" style="background:#ffecec;color:#fa3b2e;margin-left:auto">✗ Absent</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ OPPS -->
+<section id="opps" class="slide bg-light">
+<div class="slide-inner">
+  <div class="section-header">
+    <div>
+      <div class="slide-tag" style="background:#fabd0520;color:#d97706;border:1px solid #fabd0540">🎯 Opportunités Prioritaires</div>
+      <h2 class="slide-h1">Top 5 axes d'action</h2>
+      <p class="slide-sub">Classés par impact potentiel sur la visibilité digitale</p>
+    </div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-num" style="background:#fa3b2e">01</div>
+    <div>
+      <div class="opp-title">Corriger le CLS mobile (0,63 → &lt; 0,1)</div>
+      <div class="opp-desc">Optimiser la vidéo hero (lazy load, poster image statique), stabiliser la mise en page lors du chargement. Impact immédiat sur les Core Web Vitals, le ranking Google et l'expérience utilisateur mobile — où 65% du trafic se joue.</div>
+    </div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-num" style="background:#1c2b96">02</div>
+    <div>
+      <div class="opp-title">Conquérir les requêtes SEO génériques à fort volume</div>
+      <div class="opp-desc">"Panneaux solaires belgique" (1 300/mois), "installation solaire belgique" (880/mois) : créer des pages piliers et clusters de contenu ciblés. Potentiel estimé : +600-900 visites organiques supplémentaires par mois.</div>
+    </div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-num" style="background:#2eb078">03</div>
+    <div>
+      <div class="opp-title">Déployer une stratégie GEO / IA complète</div>
+      <div class="opp-desc">Structurer le contenu avec Schema.org enrichi, FAQ détaillées, données chiffrées (67% CO₂ en moins, 25 ans de garantie, 100 000 panneaux/an). Belga Solar est parfaitement positionné pour s'imposer dans ChatGPT, Gemini et Perplexity sur le secteur solaire belge.</div>
+    </div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-num" style="background:#fabd05">04</div>
+    <div>
+      <div class="opp-title" style="color:#030505">Capitaliser sur la certification B Corp</div>
+      <div class="opp-desc">Score 95,7 — exceptionnel dans le secteur. Créer du contenu dédié, cibler des backlinks médias (Trends, L'Echo, Forbes BE) et institutionnels (Entreprises pour l'environnement). Fort potentiel de notoriété et de confiance.</div>
+    </div>
+  </div>
+  <div class="opp-card">
+    <div class="opp-num" style="background:#fa8fa3">05</div>
+    <div>
+      <div class="opp-title">Activer TikTok &amp; optimiser YouTube SEO</div>
+      <div class="opp-desc">Le contenu vidéo (chantiers, visite d'usine, installation plug &amp; play) a un fort potentiel viral. YouTube optimisé avec titres et descriptions SEO peut générer du trafic organique additionnel. TikTok : segment jeune propriétaires 25-40 ans.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CLOSING -->
+<section id="closing" class="slide slide-closing">
+  <div class="cover-bar">
+    <div class="cover-bar-seg" style="background:#fa3b2e"></div>
+    <div class="cover-bar-seg" style="background:#fabd05"></div>
+    <div class="cover-bar-seg" style="background:#fa8fa3"></div>
+    <div class="cover-bar-seg" style="background:#2eb078"></div>
+    <div class="cover-bar-seg" style="background:#1c2b96"></div>
+  </div>
+  <div class="closing-inner">
+    <div class="closing-sub">Et si on développait</div>
+    <div class="closing-title">votre potentiel<br>digital ?</div>
+    <div style="width:80px;height:3px;background:#fabd05;margin-bottom:28px"></div>
+    <div class="closing-desc">Chez Poush, on ne fait pas d'audit pour faire de l'audit. On identifie ce qui freine votre visibilité en ligne — et on vous propose un plan d'action concret, réaliste, adapté à votre secteur et à vos ambitions.</div>
+    <div class="closing-services">
+      <div class="closing-svc"><div class="closing-svc-icon">📈</div>Stratégie &amp; Audit SEO</div>
+      <div class="closing-svc"><div class="closing-svc-icon">🤖</div>Optimisation GEO / IA</div>
+      <div class="closing-svc"><div class="closing-svc-icon">🌐</div>Refonte / Site Web</div>
+      <div class="closing-svc"><div class="closing-svc-icon">📱</div>Community Management</div>
+    </div>
+    <div class="closing-baseline">Développeurs de votre potentiel</div>
+    <div class="closing-contact">Michael · michael@poush.be · www.poush.be · +32 (0)81 14 06 80<br>Rue de la Croix Limont 11, B-5590 Ciney</div>
+  </div>
+</section>
+
+</main>
+
+<script>
+// Active nav pill on scroll
+const sections = document.querySelectorAll('section[id]');
+const pills = document.querySelectorAll('.nav-pill');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      pills.forEach(p => p.classList.remove('active'));
+      const active = document.querySelector(`.nav-pill[href="#${e.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => observer.observe(s));
+</script>
+
+
+</body></html>
